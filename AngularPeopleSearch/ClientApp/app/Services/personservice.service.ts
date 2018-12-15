@@ -29,8 +29,20 @@ export class PersonService {
     //.catch(this.errorHandler)
   }
 
+  savePerson(person) {
+    return this._http.get(this.myAppUrl + 'api/Person/Create', person)
+      .pipe(map((response: Response) => response.json()))
+      //.catch(this.errorHandler)
+  }
+
   updatePerson(person){
     return this._http.put(this.myAppUrl + 'api/Person/Edit', person)
+      .pipe(map((response: Response) => response.json()))
+      //.catch(this.errorHandler);
+  }
+
+  deletePerson(id) {
+    return this._http.delete(this.myAppUrl + 'api/Person/Delete/' + id)
       .pipe(map((response: Response) => response.json()))
       //.catch(this.errorHandler);
   }
