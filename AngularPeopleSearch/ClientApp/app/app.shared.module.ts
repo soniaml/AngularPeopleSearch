@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PersonService } from '../services/personservice.service'
+import { PersonService } from './services/personservice.service'
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';

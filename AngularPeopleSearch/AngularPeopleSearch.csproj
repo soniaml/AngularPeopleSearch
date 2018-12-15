@@ -26,16 +26,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\app.browser.module.ts" />
+    <None Remove="ClientApp\app\app.server.module.ts" />
     <None Remove="ClientApp\app\components\addperson\addperson.component.ts" />
     <None Remove="ClientApp\app\components\app.shared.module.ts" />
+    <None Remove="ClientApp\app\components\app\app.component.ts" />
     <None Remove="ClientApp\app\components\fetchperson\fetchperson.component.ts" />
+    <None Remove="ClientApp\app\components\home\home.component.ts" />
+    <None Remove="ClientApp\app\components\navmenu\navmenu.component.ts" />
     <None Remove="ClientApp\app\Services\personservice.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\app.browser.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\app.server.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\addperson\addperson.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\app.shared.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\app.shared.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\fetchperson\fetchperson.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\home\home.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\navmenu\navmenu.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\Services\personservice.service.ts" />
   </ItemGroup>
 
