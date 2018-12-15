@@ -8,7 +8,7 @@ namespace AngularPeopleSearch.Models
 {
     public class PersonDataAccessLayer
     {
-        AngularPeopleSearchContext db = new AngularPeopleSearchContext(new DbContextOptions<AngularPeopleSearchContext>);
+        AngularPeopleSearchContext db = new AngularPeopleSearchContext(new DbContextOptions<AngularPeopleSearchContext>());
 
         public IEnumerable<Person> GetAllPersons()
         {
@@ -16,65 +16,65 @@ namespace AngularPeopleSearch.Models
             {
                 return db.Person.ToList();
             }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int AddPerson(Person person)
+        {
+            try
+            {
+                db.Person.Add(person);
+                db.SaveChanges();
+                return 1;
+            }
             catch {
                 throw;
             }
+        }
 
-            public int AddPerson(Person person)
+        public int UpdatePerson(Person person)
+        {
+            try
             {
-                try
-                {
-                    db.Person.Add(person);
-                    db.SaveChanges();
-                    return 1;
-                }
-                catch {
-                    throw;
-                }
-            }
+                db.Entry(person).State = EntityState.Modified;
+                db.SaveChanges();
 
-            public int UpdatePerson(Person person)
+                return 1;
+            }
+            catch
             {
-                try
-                {
-                    db.Entry(person).State = EntityState.Modified;
-                    db.SaveChanges();
-
-                    return 1;
-                }
-                catch
-                {
-                    throw;
-                }
+                throw;
             }
+        }
 
-            public Person GetPersonData(int id)
+        public Person GetPersonData(int id)
+        {
+            try
             {
-                try
-                {
-                    Person person = db.Person.Find(id);
-                }
-                catch {
-                    throw;
-                }
+                Person person = db.Person.Find(id);
+                return person;
             }
+            catch {
+                throw;
+            }
+        }
 
-            public int DeletePerson(int id)
+        public int DeletePerson(int id)
+        {
+            try
             {
-
-                try
-                {
-                    Person person = db.Person.Find(id);
-                    db.Person.Remove(id);
-                    db.SaveChanges();
-                    return 1;
-                }
-                catch
-                {
-                    throw;
-                }
+                Person person = db.Person.Find(id);
+                db.Person.Remove(person);
+                db.SaveChanges();
+                return 1;
             }
-
+            catch
+            {
+                throw;
+            }
         }
     }
 }
