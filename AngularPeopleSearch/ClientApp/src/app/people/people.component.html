@@ -1,17 +1,5 @@
 <h2>People</h2>
 
-<div *ngIf="selectedPerson">
-
-  <h2>{{selectedPerson.firstName | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedPerson.id}}</div>
-  <div>
-    <label>
-      name:
-      <input [(ngModel)]="selectedPerson.firstName" placeholder="firstName">
-    </label>
-  </div>
-</div>
-
 <ul class="">
   <li *ngFor="let person of people"
       [class.selected]="person === selectedPerson"
@@ -19,3 +7,5 @@
     <span class="">{{person.id}}</span> {{person.firstName}}
   </li>
 </ul>
+
+<app-person-detail [person]="selectedPerson"></app-person-detail>
