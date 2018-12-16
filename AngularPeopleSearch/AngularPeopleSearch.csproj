@@ -38,6 +38,7 @@
     <None Remove="ClientApp\src\app\mock-people.ts" />
     <None Remove="ClientApp\src\app\people\people.component.ts" />
     <None Remove="ClientApp\src\app\person-detail\person-detail.component.ts" />
+    <None Remove="ClientApp\src\app\person.service.ts" />
     <None Remove="ClientApp\src\app\person.ts" />
   </ItemGroup>
 
@@ -54,6 +55,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\mock-people.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\people\people.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\person-detail\person-detail.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\person.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\person.ts" />
   </ItemGroup>
 
