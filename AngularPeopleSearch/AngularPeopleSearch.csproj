@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
@@ -38,6 +39,7 @@
     <None Remove="ClientApp\src\app\mock-people.ts" />
     <None Remove="ClientApp\src\app\people\people.component.ts" />
     <None Remove="ClientApp\src\app\person-detail\person-detail.component.ts" />
+    <None Remove="ClientApp\src\app\person-search\person-search.component.ts" />
     <None Remove="ClientApp\src\app\person.service.ts" />
     <None Remove="ClientApp\src\app\person.ts" />
   </ItemGroup>
@@ -55,6 +57,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\mock-people.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\people\people.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\person-detail\person-detail.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\person-search\person-search.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\person.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\person.ts" />
   </ItemGroup>

@@ -13,4 +13,8 @@ export class PersonService {
   getPeople(): Observable<Person[]> {
     return of (PEOPLE);
   }
+
+  searchByPerson(): Observable<Person[]> {
+    return of(PEOPLE);
+  }
 }

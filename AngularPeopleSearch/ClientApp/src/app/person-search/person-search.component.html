@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="row">
+    <div class="col-md-2">Filter by</div>
+    <div class="col-md-4">
+      <input type="text"
+             [(ngModel)]='personFilter'/>
+      <button class="btn-btn-privary" (click)='personSearch()'>
+        Search
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Filtered by: {{personFilter}}</h4>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table"
+           *ngIf="people && people.length">
+      <thead>
+        <tr>
+          <th>Picture</th>
+          <th>First Name</th>
+          <th>LastName</th>
+          <th>Address</th>
+          <th>Age</th>
+          <th>Interests</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of people">
+          <td>
+            <img [src]='person.image'
+                 [style.width.px]='imageWidth'
+                 [style.margin.px]='imageMargin'>
+          </td>
+          <td>{{person.firstName}}</td>
+          <td>{{person.lastName}}</td>
+          <td>{{person.address}}</td>
+          <td>{{person.age}}</td>
+          <td>{{person.interests}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
