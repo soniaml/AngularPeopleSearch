@@ -9,7 +9,16 @@ import { PersonService } from '../person.service';
 })
 export class PersonSearchComponent {
   people: Person[];
-  personFilter: string = 'a';
+
+  _personFilter: string;
+  get personFilter(): string {
+    return this._personFilter;
+  }
+  set personFilter(value: string) {
+    this.people = this.personFilter
+      ? this.performFilter(this.personFilter)
+      : this.people;
+  }
 
   pageTitle: string = "Person Search";
   imageWidth: number = 50;
@@ -31,4 +40,10 @@ export class PersonSearchComponent {
     .subscribe(people => this.people = people);
   }
 
+  performFilter(filterBy: string): Person[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.people.filter((person: Person) =>
+      person.firstName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+  }
+  
 }
