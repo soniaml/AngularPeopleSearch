@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
-//import { PEOPLE } from '../mock-people'; DONT NEED THIS ANYMORE?
 import { PersonService } from '../person.service';
 
 
