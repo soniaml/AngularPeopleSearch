@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using AngularPeopleSearch.Data.Models;
 
-namespace AngularPeopleSearch.Models
+namespace AngularPeopleSearch.Data
+
 {
     public class AngularPeopleSearchContext : DbContext
     {

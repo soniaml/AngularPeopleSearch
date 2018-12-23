@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using AngularPeopleSearch.Models;
+using AngularPeopleSearch.Data;
 
 namespace AngularPeopleSearch
 {

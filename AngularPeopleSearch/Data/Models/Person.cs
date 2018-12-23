@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace AngularPeopleSearch.Models
+namespace AngularPeopleSearch.Data.Models
 {
     public class Person
     {
