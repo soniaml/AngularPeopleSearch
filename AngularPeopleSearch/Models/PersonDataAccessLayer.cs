@@ -8,13 +8,18 @@ namespace AngularPeopleSearch.Models
 {
     public class PersonDataAccessLayer
     {
-        AngularPeopleSearchContext db = new AngularPeopleSearchContext(new DbContextOptions<AngularPeopleSearchContext>());
+        AngularPeopleSearchContext Context;
+
+        public PersonDataAccessLayer(AngularPeopleSearchContext context)
+        {
+            Context = context;
+        }
 
         public IEnumerable<Person> GetAllPersons()
         {
             try
             {
-                return db.Person.ToList();
+                return Context.Person.ToList();
             }
             catch
             {
@@ -26,8 +31,8 @@ namespace AngularPeopleSearch.Models
         {
             try
             {
-                db.Person.Add(person);
-                db.SaveChanges();
+                Context.Person.Add(person);
+                Context.SaveChanges();
                 return 1;
             }
             catch {
@@ -39,8 +44,8 @@ namespace AngularPeopleSearch.Models
         {
             try
             {
-                db.Entry(person).State = EntityState.Modified;
-                db.SaveChanges();
+                Context.Entry(person).State = EntityState.Modified;
+                Context.SaveChanges();
 
                 return 1;
             }
@@ -54,7 +59,7 @@ namespace AngularPeopleSearch.Models
         {
             try
             {
-                Person person = db.Person.Find(id);
+                Person person = Context.Person.Find(id);
                 return person;
             }
             catch {
@@ -66,9 +71,9 @@ namespace AngularPeopleSearch.Models
         {
             try
             {
-                Person person = db.Person.Find(id);
-                db.Person.Remove(person);
-                db.SaveChanges();
+                Person person = Context.Person.Find(id);
+                Context.Person.Remove(person);
+                Context.SaveChanges();
                 return 1;
             }
             catch

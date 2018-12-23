@@ -30,8 +30,10 @@ namespace AngularPeopleSearch
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            services.AddDbContext<AngularPeopleSearchContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AngularPeopleSearchContext")));
+            services.AddDbContext<AngularPeopleSearchContext>(cfg => 
+            {
+                cfg.UseSqlServer(Configuration.GetConnectionString("AngularPeopleSearchConnectionString"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

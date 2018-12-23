@@ -1,0 +1,5 @@
+{
+    "ConnectionStrings": {
+        "AngularPeopleSearchConnectionString": "server=(localdb)\\ProjectsV13;Database=AngularPeopleSearchDb;Integrated Security=true;MultipleActiveResultSets=true;"
+    }
+}
