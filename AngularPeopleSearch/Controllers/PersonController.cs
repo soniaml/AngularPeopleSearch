@@ -19,9 +19,6 @@ namespace AngularPeopleSearch.Controllers
             Context = context;
         }
 
-
-        //PersonDataAccessLayer personDataAccessLayer = new PersonDataAccessLayer();
-
         [HttpGet]
         [Route("api/Person/Index")]
         public IEnumerable<Person> Index()
@@ -30,7 +27,6 @@ namespace AngularPeopleSearch.Controllers
                 .OrderBy(p => p.LastName)
                 .ToList();
             return result;
-            //return personDataAccessLayer.GetAllPersons();
         }
 
         //[HttpPost]

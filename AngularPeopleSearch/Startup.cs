@@ -36,6 +36,8 @@ namespace AngularPeopleSearch
             });
 
             services.AddTransient<PeopleSeeder>();
+
+            services.AddScoped<IPersonRepository, PersonRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
