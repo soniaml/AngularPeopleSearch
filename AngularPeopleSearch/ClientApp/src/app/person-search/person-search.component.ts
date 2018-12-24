@@ -10,7 +10,7 @@ import { PersonService } from '../person.service';
 export class PersonSearchComponent {
   people: Person[];
 
-  personFilter: string = 'myfilter';
+  personFilter: string = '';
 
   pageTitle: string = "Person Search";
   imageWidth: number = 50;
@@ -31,11 +31,9 @@ export class PersonSearchComponent {
   }
 
   getPeopleByNamePart(): void {
-    this.personService.getPeopleByNamePart().subscribe(
+    this.personService.getPeopleByNamePart(this.personFilter).subscribe(
       people => this.people = people,
       error => this.errorMessage = <any>error
     );
   }
-
-  
 }

@@ -62,21 +62,12 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public IEnumerable<Person> GetPeopleByNamePart(string namePart)
+        public async Task<List<Person>> GetPeopleByNamePart(string namePart)
         {
-            try
-            {
-                var people = Context.Person
+            return await Context.Person
                     .Where(p => p.FirstName.Contains(namePart) || p.LastName.Contains(namePart))
                     .OrderBy(p => p.LastName)
-                    .ToList();
-
-                return people;                    
-            }
-            catch
-            {
-                throw;
-            }
+                    .ToListAsync();
         }
 
         public Person GetPersonData(int id)

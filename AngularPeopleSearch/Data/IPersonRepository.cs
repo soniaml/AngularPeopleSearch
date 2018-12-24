@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AngularPeopleSearch.Data.Models;
+using System.Threading.Tasks;
 
 namespace AngularPeopleSearch.Data
 {
@@ -8,7 +9,8 @@ namespace AngularPeopleSearch.Data
         int AddPerson(Person person);
         int DeletePerson(int id);
         IEnumerable<Person> GetAllPeople();
-        IEnumerable<Person> GetPeopleByNamePart(string namePart);
+        Task<List<Person>> GetPeopleByNamePart(string namePart);
+
         Person GetPersonData(int id);
         int UpdatePerson(Person person);
     }

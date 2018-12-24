@@ -28,8 +28,8 @@ export class PersonService {
       );
   }
 
-  getPeopleByNamePart(): Observable<Person[]> {
-    return this.http.get<Person[]>(this.personUrl + 'GetPeopleByNamePart')
+  getPeopleByNamePart(namePart: string): Observable<Person[]> {
+    return this.http.get<Person[]>(this.personUrl + 'GetPeopleByNamePart/' + namePart)
       .pipe(tap(data => console.log('All:' + JSON.stringify(data))),
         catchError(this.handleError)
       );

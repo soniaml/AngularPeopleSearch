@@ -6,8 +6,6 @@ using AngularPeopleSearch.Data;
 using Microsoft.AspNetCore.Mvc;
 using AngularPeopleSearch.Data.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace AngularPeopleSearch.Controllers
 {
     [Route("api/person")]
@@ -21,11 +19,18 @@ namespace AngularPeopleSearch.Controllers
         }
 
         [HttpGet]
-        [Route("GetPeopleByNamePart")]
-        public IEnumerable<Person> Index()
+        [Route("GetPeopleByNamePart/{namePart}")]
+        public async Task<ActionResult> GetPeopleByNamePart(string namePart)
         {
-            var results = PersonRepository.GetPeopleByNamePart("i");
-            return results;
+            try
+            {
+                var results = await PersonRepository.GetPeopleByNamePart(namePart);
+                return Ok(results);
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
 
         //[HttpPost]
