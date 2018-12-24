@@ -13,20 +13,19 @@ namespace AngularPeopleSearch.Controllers
     //[Route("api/[controller]")]
     public class PersonController : Controller
     {
-        AngularPeopleSearchContext Context;
-        public PersonController(AngularPeopleSearchContext context)
+        IPersonRepository PersonRepository;
+
+        public PersonController(IPersonRepository personRepository)
         {
-            Context = context;
+            PersonRepository = personRepository;
         }
 
         [HttpGet]
         [Route("api/Person/Index")]
         public IEnumerable<Person> Index()
         {
-            var result = Context.Person
-                .OrderBy(p => p.LastName)
-                .ToList();
-            return result;
+            var results = PersonRepository.GetAllPeople();
+            return results;
         }
 
         //[HttpPost]

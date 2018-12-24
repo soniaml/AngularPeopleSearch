@@ -46,15 +46,30 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public IEnumerable<Person> GetAllPersons()
+        public IEnumerable<Person> GetAllPeople()
         {
             try
             {
                 var result = Context.Person
-                    .OrderBy(p => p.LastName)
-                    .ToList();
+                            .OrderBy(p => p.LastName)
+                            .ToList();
 
                 return result;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Person> GetPeopleByNamePart(string namePart)
+        {
+            try
+            {
+                return Context.Person
+                    .Where(p => p.FirstName == namePart)
+                    .OrderBy(p => p.LastName)
+                    .ToList();
             }
             catch
             {

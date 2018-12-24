@@ -7,7 +7,8 @@ namespace AngularPeopleSearch.Data
     {
         int AddPerson(Person person);
         int DeletePerson(int id);
-        IEnumerable<Person> GetAllPersons();
+        IEnumerable<Person> GetAllPeople();
+        IEnumerable<Person> GetPeopleByNamePart(string namePart);
         Person GetPersonData(int id);
         int UpdatePerson(Person person);
     }
