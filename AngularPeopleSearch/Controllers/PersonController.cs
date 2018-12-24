@@ -10,7 +10,7 @@ using AngularPeopleSearch.Data.Models;
 
 namespace AngularPeopleSearch.Controllers
 {
-    //[Route("api/[controller]")]
+    [Route("api/person")]
     public class PersonController : Controller
     {
         IPersonRepository PersonRepository;
@@ -21,10 +21,10 @@ namespace AngularPeopleSearch.Controllers
         }
 
         [HttpGet]
-        [Route("api/Person/Index")]
+        [Route("GetPeopleByNamePart")]
         public IEnumerable<Person> Index()
         {
-            var results = PersonRepository.GetAllPeople();
+            var results = PersonRepository.GetPeopleByNamePart("i");
             return results;
         }
 

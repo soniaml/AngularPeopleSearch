@@ -29,5 +29,13 @@ export class PersonSearchComponent {
       error => this.errorMessage = <any>error
     );
   }
+
+  getPeopleByNamePart(): void {
+    this.personService.getPeopleByNamePart().subscribe(
+      people => this.people = people,
+      error => this.errorMessage = <any>error
+    );
+  }
+
   
 }

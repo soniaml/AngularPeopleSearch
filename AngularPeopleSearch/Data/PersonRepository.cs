@@ -66,10 +66,12 @@ namespace AngularPeopleSearch.Data
         {
             try
             {
-                return Context.Person
-                    .Where(p => p.FirstName == namePart)
+                var people = Context.Person
+                    .Where(p => p.FirstName.Contains(namePart) || p.LastName.Contains(namePart))
                     .OrderBy(p => p.LastName)
                     .ToList();
+
+                return people;                    
             }
             catch
             {

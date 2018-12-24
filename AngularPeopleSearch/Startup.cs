@@ -35,8 +35,8 @@ namespace AngularPeopleSearch
                 cfg.UseSqlServer(Configuration.GetConnectionString("AngularPeopleSearchConnectionString"));
             });
 
+            //Dependency injections
             services.AddTransient<PeopleSeeder>();
-
             services.AddScoped<IPersonRepository, PersonRepository>();
         }
 
