@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using AngularPeopleSearch.Data.Models;
 
 namespace AngularPeopleSearch.Data
@@ -28,7 +25,7 @@ namespace AngularPeopleSearch.Data
                         FirstName = "Fred",
                         LastName = "Flintstone",
                         Address = "100 Bedrock Lane",
-                        //Interests = "Buffalo Lodge, Bowling",
+                        Interests = "Buffalo Lodge, Bowling",
                         Age = 25
                     });
                 Context.Person.Add(
@@ -37,7 +34,7 @@ namespace AngularPeopleSearch.Data
                         FirstName = "Wilma",
                         LastName = "Flintstone",
                         Address = "100 Bedrock Lane",
-                        //Interests = "Data Science",
+                        Interests = "Data Science",
                         Age = 24
                     });
                 Context.Person.Add(
@@ -46,7 +43,7 @@ namespace AngularPeopleSearch.Data
                         FirstName = "Deputy",
                         LastName = "Dog",
                         Address = "50 Outwest Ave.",
-                        //Interests = "Law Enforcement",
+                        Interests = "Law Enforcement",
                         Age = 30
                     });
             }

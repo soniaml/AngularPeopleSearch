@@ -1,7 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace AngularPeopleSearch.Data.Models
+﻿namespace AngularPeopleSearch.Data.Models
 {
     public class Person
     {
@@ -10,7 +7,7 @@ namespace AngularPeopleSearch.Data.Models
         public string LastName { get; set; }
         public string Address { get; set; }
         public int Age { get; set; }
-        //public string Interests { get; set; }
+        public string Interests { get; set; }
         //public byte Image { get; set; }
     }
 }
