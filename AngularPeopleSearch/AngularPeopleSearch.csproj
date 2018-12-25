@@ -33,8 +33,6 @@
     <None Remove="ClientApp\app\components\app.shared.module.ts" />
     <None Remove="ClientApp\app\components\app\app.component.ts" />
     <None Remove="ClientApp\app\components\fetchperson\fetchperson.component.ts" />
-    <None Remove="ClientApp\app\components\home\home.component.ts" />
-    <None Remove="ClientApp\app\components\navmenu\navmenu.component.ts" />
     <None Remove="ClientApp\app\Services\personservice.service.ts" />
     <None Remove="ClientApp\src\app\mock-people.ts" />
     <None Remove="ClientApp\src\app\people\people.component.ts" />
@@ -51,8 +49,6 @@
     <TypeScriptCompile Include="ClientApp\app\app.shared.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\fetchperson\fetchperson.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\home\home.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\navmenu\navmenu.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\Services\personservice.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\mock-people.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\people\people.component.ts" />

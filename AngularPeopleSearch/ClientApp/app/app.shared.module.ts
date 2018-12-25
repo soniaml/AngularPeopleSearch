@@ -6,16 +6,12 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
-import { NavMenuComponent } from './components/navmenu/navmenu.component';
-import { HomeComponent } from './components/home/home.component';
 import { FetchPersonComponent } from './components/fetchperson/fetchperson.component'
 import { createperson } from './components/addperson/AddPerson.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
-    HomeComponent,
     FetchPersonComponent,
     createperson,
   ],
@@ -25,12 +21,9 @@ import { createperson } from './components/addperson/AddPerson.component'
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
       { path: 'fetch-person', component: FetchPersonComponent },
       { path: 'register-person', component: createperson },
       { path: 'person/edit/:id', component: createperson },
-      { path: '**', redirectTo: 'home' }
     ])
   ],
   providers: [PersonService]
