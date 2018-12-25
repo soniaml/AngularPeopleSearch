@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
-using AngularPeopleSearch.Data.Models;
 using System.Threading.Tasks;
+using AngularPeopleSearch.Data.Models;
 
 namespace AngularPeopleSearch.Data
 {
     public interface IPersonRepository
     {
-        int AddPerson(Person person);
-        int DeletePerson(int id);
-        IEnumerable<Person> GetAllPeople();
+        int Add(Person person);
+        int Delete(int id);
+        Task<List<Person>> GetAllPeople();
         Task<List<Person>> GetPeopleByNamePart(string namePart);
 
-        Person GetPersonData(int id);
-        int UpdatePerson(Person person);
+        Person GetById(int id);
+        int Update(Person person);
     }
 }

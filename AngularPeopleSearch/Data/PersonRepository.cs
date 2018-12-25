@@ -1,10 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AngularPeopleSearch.Data;
 using AngularPeopleSearch.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AngularPeopleSearch.Data
 {
@@ -17,7 +15,7 @@ namespace AngularPeopleSearch.Data
             Context = context;
         }
 
-        public int AddPerson(Person person)
+        public int Add(Person person)
         {
             try
             {
@@ -31,7 +29,7 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public int DeletePerson(int id)
+        public int Delete(int id)
         {
             try
             {
@@ -46,15 +44,13 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public IEnumerable<Person> GetAllPeople()
+        public async Task<List<Person>> GetAllPeople()
         {
             try
             {
-                var result = Context.Person
+                return await Context.Person
                             .OrderBy(p => p.LastName)
-                            .ToList();
-
-                return result;
+                            .ToListAsync();
             }
             catch
             {
@@ -70,7 +66,7 @@ namespace AngularPeopleSearch.Data
                     .ToListAsync();
         }
 
-        public Person GetPersonData(int id)
+        public Person GetById(int id)
         {
             try
             {
@@ -83,7 +79,7 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public int UpdatePerson(Person person)
+        public int Update(Person person)
         {
             try
             {
