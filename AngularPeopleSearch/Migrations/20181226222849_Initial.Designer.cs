@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AngularPeopleSearch.Migrations
 {
     [DbContext(typeof(AngularPeopleSearchContext))]
-    [Migration("20181215144038_Initial")]
+    [Migration("20181226222849_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace AngularPeopleSearch.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("AngularPeopleSearch.Models.Person", b =>
+            modelBuilder.Entity("AngularPeopleSearch.Data.Models.Person", b =>
                 {
                     b.Property<int>("PersonID")
                         .ValueGeneratedOnAdd()
@@ -31,6 +31,10 @@ namespace AngularPeopleSearch.Migrations
                     b.Property<int>("Age");
 
                     b.Property<string>("FirstName");
+
+                    b.Property<string>("ImageUrl");
+
+                    b.Property<string>("Interests");
 
                     b.Property<string>("LastName");
 

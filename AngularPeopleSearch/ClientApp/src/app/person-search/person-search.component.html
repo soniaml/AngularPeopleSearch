@@ -33,9 +33,11 @@
       <tbody>
         <tr *ngFor="let person of people">
           <td>
-            <img [src]='person.image'
+         <img src={{person.imageUrl}}
                  [style.width.px]='imageWidth'
-                 [style.margin.px]='imageMargin'>
+                 [style.margin.px]='imageMargin'
+                 />
+                 
           </td>
           <td>{{person.firstName}}</td>
           <td>{{person.lastName}}</td>

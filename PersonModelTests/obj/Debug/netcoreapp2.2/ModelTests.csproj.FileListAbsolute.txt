@@ -1,3 +1,5 @@
+C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.Views.dll
+C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.Views.pdb
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -6,14 +8,12 @@ C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netco
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\ModelTests.runtimeconfig.dev.json
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\ModelTests.dll
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\ModelTests.pdb
+C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.dll
+C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.pdb
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.csprojAssemblyReference.cache
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.csproj.CoreCompileInputs.cache
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.AssemblyInfoInputs.cache
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.AssemblyInfo.cs
+C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.csproj.CopyComplete
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.dll
 C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.pdb
-C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.Views.dll
-C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.Views.pdb
-C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.dll
-C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\bin\Debug\netcoreapp2.2\AngularPeopleSearch.pdb
-C:\Users\Sonia\source\repos\AngularPeopleSearch\PersonModelTests\obj\Debug\netcoreapp2.2\ModelTests.csproj.CopyComplete

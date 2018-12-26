@@ -26,7 +26,8 @@ namespace AngularPeopleSearch.Data
                         LastName = "Flintstone",
                         Address = "100 Bedrock Lane",
                         Interests = "Buffalo Lodge, Bowling",
-                        Age = 25
+                        Age = 25,
+                        ImageUrl = "./images/Fred_Flintstone.jpg"
                     });
                 Context.Person.Add(
                     new Person()
@@ -35,7 +36,8 @@ namespace AngularPeopleSearch.Data
                         LastName = "Flintstone",
                         Address = "100 Bedrock Lane",
                         Interests = "Data Science",
-                        Age = 24
+                        Age = 24,
+                        ImageUrl = "./images/Wilma_Flintstone.jpg"
                     });
                 Context.Person.Add(
                     new Person()
@@ -44,7 +46,8 @@ namespace AngularPeopleSearch.Data
                         LastName = "Dog",
                         Address = "50 Outwest Ave.",
                         Interests = "Law Enforcement",
-                        Age = 30
+                        Age = 30,
+                        ImageUrl = "./images/Deputy_Dog.jpg"
                     });
             }
             Context.SaveChanges();

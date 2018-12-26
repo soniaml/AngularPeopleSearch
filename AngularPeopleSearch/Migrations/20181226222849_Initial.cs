@@ -16,7 +16,9 @@ namespace AngularPeopleSearch.Migrations
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
-                    Age = table.Column<int>(nullable: false)
+                    Age = table.Column<int>(nullable: false),
+                    Interests = table.Column<string>(nullable: true),
+                    ImageUrl = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
