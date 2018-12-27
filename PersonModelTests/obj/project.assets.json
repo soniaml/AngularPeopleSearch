@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "bootstrap/4.1.3": {
+      "bootstrap/4.0.0": {
         "type": "package",
         "dependencies": {
           "jQuery": "[3.0.0, 4.0.0)",
-          "popper.js": "[1.14.0, 2.0.0)"
+          "popper.js": "[1.12.9, 2.0.0)"
         }
       },
       "jQuery/3.0.0": {
@@ -1150,7 +1150,7 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
-      "popper.js/1.14.0": {
+      "popper.js/1.12.9": {
         "type": "package"
       },
       "Remotion.Linq/2.2.0": {
@@ -2974,7 +2974,7 @@
           "Microsoft.AspNetCore.StaticFiles": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.0",
           "System.Drawing.Common": "4.6.0-preview.18571.3",
-          "bootstrap": "4.1.3"
+          "bootstrap": "4.0.0"
         },
         "compile": {
           "bin/placeholder/AngularPeopleSearch.dll": {}
@@ -2986,14 +2986,14 @@
     }
   },
   "libraries": {
-    "bootstrap/4.1.3": {
-      "sha512": "yi2n0QHkTPHFg0docVnhrlV38qkZeHk/PDUXN6P46Bn9HIwP6O8MURdpJ5G5fazwDG3eOzVDNfZi1fTfKV5vHw==",
+    "bootstrap/4.0.0": {
+      "sha512": "DQ+lOJrJLwsNlPZJoXWHHUCO7b1s1ri824GfPKkAMXaW4TgaU+SDwwc9kGioz6kVSaFKi52Mas7Pnh8yBuNO2w==",
       "type": "package",
-      "path": "bootstrap/4.1.3",
+      "path": "bootstrap/4.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bootstrap.4.1.3.nupkg.sha512",
+        "bootstrap.4.0.0.nupkg.sha512",
         "bootstrap.nuspec",
         "content/Content/bootstrap-grid.css",
         "content/Content/bootstrap-grid.css.map",
@@ -3014,27 +3014,7 @@
         "content/Scripts/bootstrap.js",
         "content/Scripts/bootstrap.js.map",
         "content/Scripts/bootstrap.min.js",
-        "content/Scripts/bootstrap.min.js.map",
-        "contentFiles/Content/bootstrap-grid.css",
-        "contentFiles/Content/bootstrap-grid.css.map",
-        "contentFiles/Content/bootstrap-grid.min.css",
-        "contentFiles/Content/bootstrap-grid.min.css.map",
-        "contentFiles/Content/bootstrap-reboot.css",
-        "contentFiles/Content/bootstrap-reboot.css.map",
-        "contentFiles/Content/bootstrap-reboot.min.css",
-        "contentFiles/Content/bootstrap-reboot.min.css.map",
-        "contentFiles/Content/bootstrap.css",
-        "contentFiles/Content/bootstrap.css.map",
-        "contentFiles/Content/bootstrap.min.css",
-        "contentFiles/Content/bootstrap.min.css.map",
-        "contentFiles/Scripts/bootstrap.bundle.js",
-        "contentFiles/Scripts/bootstrap.bundle.js.map",
-        "contentFiles/Scripts/bootstrap.bundle.min.js",
-        "contentFiles/Scripts/bootstrap.bundle.min.js.map",
-        "contentFiles/Scripts/bootstrap.js",
-        "contentFiles/Scripts/bootstrap.js.map",
-        "contentFiles/Scripts/bootstrap.min.js",
-        "contentFiles/Scripts/bootstrap.min.js.map"
+        "content/Scripts/bootstrap.min.js.map"
       ]
     },
     "jQuery/3.0.0": {
@@ -4945,10 +4925,10 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "popper.js/1.14.0": {
-      "sha512": "oamtAIKoHa/s45chV0TozJhrwTRUBURUVjFl1wHw1MrCplFDxmK41CMrMDQx1Eq08n7oEzqSHEPPWCdA6Mhb1w==",
+    "popper.js/1.12.9": {
+      "sha512": "S3nib/Aq8Uu8AvB9stHjgj+EpWhaUOwxaHiKY3J9NpydUG3SuwUFCNs+AA+dvLt4REoMM2N4DaWvWWki8VJyqQ==",
       "type": "package",
-      "path": "popper.js/1.14.0",
+      "path": "popper.js/1.12.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4978,7 +4958,7 @@
         "content/Scripts/umd/popper.js.map",
         "content/Scripts/umd/popper.min.js",
         "content/Scripts/umd/popper.min.js.map",
-        "popper.js.1.14.0.nupkg.sha512",
+        "popper.js.1.12.9.nupkg.sha512",
         "popper.js.nuspec"
       ]
     },
