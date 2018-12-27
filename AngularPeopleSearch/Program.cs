@@ -1,9 +1,8 @@
+using AngularPeopleSearch.Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AngularPeopleSearch.Data;
-using System;
 
 namespace AngularPeopleSearch
 {
@@ -34,7 +33,7 @@ namespace AngularPeopleSearch
         private static void SetupConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
         {
             builder.Sources.Clear();//removes default configuration options
-            builder.AddJsonFile("config.json", false, true)
+            builder.AddJsonFile("appsettings.json", false, true)
                 .AddEnvironmentVariables();
         }
     }
