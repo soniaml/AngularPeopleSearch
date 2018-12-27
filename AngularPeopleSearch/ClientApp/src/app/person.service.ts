@@ -3,7 +3,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { Person } from './person';
-import { PEOPLE } from './mock-people';
 
 
 @Injectable({
@@ -13,20 +12,6 @@ export class PersonService {
   private personUrl = 'api/Person/';
 
   constructor(private http: HttpClient) { }
-
-  addPerson(): void {
-  }
-
-  getPeople(): Observable<Person[]> {
-    return of (PEOPLE);
-  }
-
-  getPersonsByName(): Observable<Person[]> {
-    return this.http.get<Person[]>(this.personUrl + 'GetPeopleByNamePart')
-      .pipe(tap(data => console.log('All:' + JSON.stringify(data))),
-        catchError(this.handleError)
-      );
-  }
 
   getPeopleByNamePart(namePart: string): Observable<Person[]> {
     return this.http.get<Person[]>(this.personUrl + 'GetPeopleByNamePart/' + namePart)

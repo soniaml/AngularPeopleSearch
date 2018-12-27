@@ -23,13 +23,6 @@ export class PersonSearchComponent {
   ngOnInit() {
   }
 
-  getPeople(): void {
-    this.personService.getPersonsByName().subscribe(
-      people => this.people = people,
-      error => this.errorMessage = <any>error
-    );
-  }
-
   getPeopleByNamePart(): void {
     this.personService.getPeopleByNamePart(this.personFilter).subscribe(
       people => this.people = people,
