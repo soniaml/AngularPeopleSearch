@@ -16,6 +16,7 @@ export class PersonSearchComponent {
   imageWidth: number = 50;
   imageMargin: number = 2;
   errorMessage: string;
+  processing: boolean = false;
 
   constructor(private personService: PersonService) {
   }
@@ -24,9 +25,21 @@ export class PersonSearchComponent {
   }
 
   getPeopleByNamePart(): void {
-    this.personService.getPeopleByNamePart(this.personFilter).subscribe(
-      people => this.people = people,
-      error => this.errorMessage = <any>error
-    );
+
+    if (this.personFilter === '') {
+      return;
+    }
+    else {
+
+      this.processing = true;
+
+      this.personService.getPeopleByNamePart(this.personFilter).subscribe(
+        people => {
+          this.people = people;
+          this.processing = false;
+        },
+        error => this.errorMessage = <any>error
+      );
+    }
   }
 }

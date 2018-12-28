@@ -5,8 +5,8 @@
   <div class="row">
     <div class="col-md-4">
       <input type="text" placeholder="Search"
-             [(ngModel)]='personFilter'/>
-      <button class="btn btn-primary" (click)='getPeopleByNamePart()'>
+             [(ngModel)]='personFilter' />
+      <button class="btn btn-primary" (click)='getPeopleByNamePart()' [disabled]="processing">
         Search
       </button>
     </div>
@@ -16,9 +16,10 @@
       <h4>Filtered by: {{personFilter}}</h4>
     </div>
   </div>
+  <app-processing *ngIf="processing"></app-processing>
   <div class="table-responsive">
     <table class="table"
-           *ngIf="people && people.length">
+           *ngIf="people && people.length && !processing">
       <thead>
         <tr>
           <th>Picture</th>
@@ -32,11 +33,10 @@
       <tbody>
         <tr *ngFor="let person of people">
           <td>
-         <img src={{person.imageUrl}}
+            <img src={{person.imageUrl}}
                  [style.width.px]='imageWidth'
-                 [style.margin.px]='imageMargin'
-                 />
-                 
+                 [style.margin.px]='imageMargin' />
+
           </td>
           <td>{{person.firstName}}</td>
           <td>{{person.lastName}}</td>
