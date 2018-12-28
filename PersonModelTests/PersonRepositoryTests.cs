@@ -126,34 +126,35 @@ namespace PersonModelTests
             }
         }
 
-        //[TestMethod]
-        //public void CanGetById()
-        //{
-        //    var options = new DbContextOptionsBuilder<AngularPeopleSearchContext>()
-        //    .UseInMemoryDatabase(databaseName: "CanGetPeopleById")
-        //    .Options;
+        [TestMethod]
+        public void CanGetById()
+        {
+            var options = new DbContextOptionsBuilder<AngularPeopleSearchContext>()
+            .UseInMemoryDatabase(databaseName: "CanGetPeopleById")
+            .Options;
 
-        //    var iD = 2;
+            using (var context = new AngularPeopleSearchContext(options))
+            {
+                var personRepository = new PersonRepository(context);
 
-        //    using (var context = new AngularPeopleSearchContext(options))
-        //    {
-        //        var personRepository = new PersonRepository(context);
+                foreach (Person p in People)
+                {
+                    personRepository.Add(p);
+                }
+            }
 
-        //        foreach (Person p in People)
-        //        {
-        //            personRepository.Add(p);
-        //        }
-        //    }
+            using (var context2 = new AngularPeopleSearchContext(options))
+            {
+                var personRepository = new PersonRepository(context2);
 
-        //    using (var context2 = new AngularPeopleSearchContext(options))
-        //    {
-        //        var personRepository = new PersonRepository(context2);
+                var iD = context2.Person.FirstAsync().Result.PersonID;
 
-        //        var person = personRepository.GetById(iD);
-        //        Assert.IsNotNull(person);
-        //        Assert.AreEqual(iD, person.PersonID);
-        //    }
-        //}
+                var person = personRepository.GetById(iD);
+
+                Assert.IsNotNull(person);
+                Assert.AreEqual(iD, person.PersonID);
+            }
+        }
 
         [TestMethod]
         public void CanGetPeopleByName()
@@ -194,26 +195,27 @@ namespace PersonModelTests
             .Options;
 
             int expectedAge = 82;
+            int personId;
 
             using (var context = new AngularPeopleSearchContext(options))
             {
                 var personRepository = new PersonRepository(context);
-                personRepository.Add(People[0]);
+                personId = personRepository.Add(People[0]);
             }
 
             using (var context2 = new AngularPeopleSearchContext(options))
             {
-                var updatedPerson = context2.Person.FirstAsync().Result;
+                var personRepository = new PersonRepository(context2);
+                var updatedPerson = personRepository.GetById(personId);
                 updatedPerson.Age = expectedAge;
 
-                var personRepository = new PersonRepository(context2);
                 personRepository.Update(updatedPerson);
             }
 
             using (var context3 = new AngularPeopleSearchContext(options))
             {
                 var result = context3.Person;
-                Assert.AreEqual(expectedAge, context3.Person.FirstAsync().Result.Age);
+                Assert.AreEqual(expectedAge, context3.Person.FirstAsync(p => p.PersonID == personId).Result.Age);
             }
         }
     }

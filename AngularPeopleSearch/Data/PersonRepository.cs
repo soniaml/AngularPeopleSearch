@@ -21,7 +21,7 @@ namespace AngularPeopleSearch.Data
             {
                 Context.Person.Add(person);
                 Context.SaveChanges();
-                return 1;
+                return person.PersonID;
             }
             catch
             {
@@ -44,13 +44,13 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public async Task<List<Person>> GetAllPeople()
+        public Task<List<Person>> GetAllPeople()
         {
             try
             {
-                return await Context.Person
-                            .OrderBy(p => p.LastName)
-                            .ToListAsync();
+                return Context.Person
+                       .OrderBy(p => p.LastName)
+                       .ToListAsync();
             }
             catch
             {
@@ -58,12 +58,12 @@ namespace AngularPeopleSearch.Data
             }
         }
 
-        public async Task<List<Person>> GetPeopleByNamePart(string namePart)
+        public Task<List<Person>> GetPeopleByNamePart(string namePart)
         {
-            return await Context.Person
-                    .Where(p => p.FirstName.Contains(namePart) || p.LastName.Contains(namePart))
-                    .OrderBy(p => p.LastName)
-                    .ToListAsync();
+            return Context.Person
+                   .Where(p => p.FirstName.Contains(namePart) || p.LastName.Contains(namePart))
+                   .OrderBy(p => p.LastName)
+                   .ToListAsync();
         }
 
         public Person GetById(int id)
