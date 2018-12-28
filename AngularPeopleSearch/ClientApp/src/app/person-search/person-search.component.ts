@@ -17,6 +17,7 @@ export class PersonSearchComponent {
   imageMargin: number = 2;
   errorMessage: string;
   processing: boolean = false;
+  showSearchResults: boolean = false;
 
   constructor(private personService: PersonService) {
   }
@@ -27,6 +28,7 @@ export class PersonSearchComponent {
   getPeopleByNamePart(): void {
 
     if (this.personFilter === '') {
+      this.showSearchResults = false;
       return;
     }
     else {
@@ -37,6 +39,7 @@ export class PersonSearchComponent {
         people => {
           this.people = people;
           this.processing = false;
+          this.showSearchResults = this.people.length > 0;
         },
         error => this.errorMessage = <any>error
       );
