@@ -20,6 +20,9 @@ namespace AngularPeopleSearch.Controllers
         {
             try
             {
+                //For simulation purposes only
+                System.Threading.Thread.Sleep(2000);
+
                 var results = await PersonRepository.GetPeopleByNamePart(namePart);
                 return Ok(results);
             }
